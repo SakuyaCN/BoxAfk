@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1smhytgfdmgf"]
+
+[ext_resource type="Texture2D" uid="uid://cd8k8u62278fy" path="res://texutre/common_board_quality_white.png" id="1_aqdwr"]
+
+[node name="EquBox" type="TextureRect"]
+offset_left = 195.2
+offset_top = -0.200012
+offset_right = 275.2
+offset_bottom = 79.8
+texture = ExtResource("1_aqdwr")
+expand_mode = 1

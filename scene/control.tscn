@@ -1,0 +1,422 @@
+[gd_scene load_steps=22 format=3 uid="uid://ck4cajmn88l6w"]
+
+[ext_resource type="Theme" uid="uid://dsflj3ng5jpr1" path="res://scene/new_theme.tres" id="1_5mwro"]
+[ext_resource type="Texture2D" uid="uid://0m6ke5cwbrpp" path="res://texutre/common_tips_board_01.png" id="1_tn6wp"]
+[ext_resource type="Texture2D" uid="uid://dhugjacuff8ws" path="res://texutre/wx_bg.png" id="2_127gs"]
+[ext_resource type="Script" path="res://scene/control.gd" id="2_a7mhe"]
+[ext_resource type="Texture2D" uid="uid://gx6j8d8ytaha" path="res://texutre/common_img_zhaoshicao01.png" id="2_jmuat"]
+[ext_resource type="Texture2D" uid="uid://dtswpk7vp5jsm" path="res://texutre/common_xiala_board_02.png" id="3_f15dh"]
+[ext_resource type="Texture2D" uid="uid://c7aq06ji3jqrn" path="res://texutre/jj_icon_2.png" id="4_eugup"]
+[ext_resource type="Texture2D" uid="uid://cg6vl7nemrfit" path="res://texutre/jj_icon_4.png" id="5_g66m1"]
+[ext_resource type="Texture2D" uid="uid://pc57n0lhmhq6" path="res://texutre/common_img_jsdi.png" id="7_b1dok"]
+[ext_resource type="FontFile" uid="uid://dxqivs71e381k" path="res://Font/MiniJYH.ttf" id="8_688iu"]
+[ext_resource type="Texture2D" uid="uid://m3h07ykc4dpo" path="res://texutre/bagua_ring_0045_Tex.png" id="10_ai84c"]
+[ext_resource type="Texture2D" uid="uid://bcfxuogout5sy" path="res://texutre/mp_img_gaibang_chenyuan.png" id="11_b1y86"]
+[ext_resource type="PackedScene" uid="uid://d1smhytgfdmgf" path="res://scene/item/equ_box.tscn" id="12_ckbqf"]
+[ext_resource type="Texture2D" uid="uid://d26y24guocdr" path="res://texutre/sc_icon_bx01.png" id="12_tuto7"]
+[ext_resource type="FontFile" uid="uid://cnehnf4rhxdnb" path="res://Font/ObelixProNum.ttf" id="13_h2hbs"]
+[ext_resource type="Texture2D" uid="uid://djrjcun0jv1k8" path="res://texutre/xg_board_yeqian_01.png" id="14_3ktau"]
+[ext_resource type="Texture2D" uid="uid://cjiayuak0hmqo" path="res://texutre/xg_board_yeqian_02.png" id="15_37ax5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q4yvo"]
+texture = ExtResource("14_3ktau")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pbt7n"]
+texture = ExtResource("14_3ktau")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajqxj"]
+texture = ExtResource("15_37ax5")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pyy6b"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5mwro")
+script = ExtResource("2_a7mhe")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_127gs")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Top" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+texture = ExtResource("1_tn6wp")
+
+[node name="TextureRect" type="TextureRect" parent="Top"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 107.0
+offset_bottom = 106.0
+texture = ExtResource("2_jmuat")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Top"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 12.0
+offset_right = 281.0
+offset_bottom = 52.0
+texture = ExtResource("3_f15dh")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Top/TextureRect2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -13.0
+offset_right = 42.0
+offset_bottom = 13.0
+grow_vertical = 2
+texture = ExtResource("4_eugup")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Top/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_right = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Top"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 12.0
+offset_right = 450.0
+offset_bottom = 52.0
+texture = ExtResource("3_f15dh")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Top/TextureRect3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -13.0
+offset_right = 42.0
+offset_bottom = 13.0
+grow_vertical = 2
+texture = ExtResource("5_g66m1")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Top/TextureRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Top"]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 12.0
+offset_right = 626.0
+offset_bottom = 52.0
+texture = ExtResource("7_b1dok")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Top/TextureRect4"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 38.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_688iu")
+theme_override_font_sizes/font_size = 24
+text = "修为"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Top/TextureRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mid" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.056
+anchor_right = 1.0
+anchor_bottom = 0.616
+offset_top = 0.487999
+offset_bottom = 0.36792
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="Mid"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.2
+offset_top = -267.3
+offset_right = 249.2
+offset_bottom = 235.3
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_ai84c")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Mid/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -131.0
+offset_right = 98.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_b1y86")
+
+[node name="EquBox" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 203.2
+offset_right = 283.2
+
+[node name="EquBox2" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 92.2
+offset_top = 44.8
+offset_right = 172.2
+offset_bottom = 124.8
+
+[node name="EquBox3" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 312.2
+offset_top = 44.8
+offset_right = 392.2
+offset_bottom = 124.8
+
+[node name="EquBox4" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 418.2
+offset_top = 120.8
+offset_right = 498.2
+offset_bottom = 200.8
+
+[node name="EquBox6" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 418.2
+offset_top = 221.8
+offset_right = 498.2
+offset_bottom = 301.8
+
+[node name="EquBox5" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = -7.79999
+offset_top = 124.8
+offset_right = 72.2
+offset_bottom = 204.8
+
+[node name="EquBox7" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = -7.79999
+offset_top = 221.8
+offset_right = 72.2
+offset_bottom = 301.8
+
+[node name="EquBox8" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = -7.79999
+offset_top = 323.8
+offset_right = 72.2
+offset_bottom = 403.8
+
+[node name="EquBox9" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 418.2
+offset_top = 323.8
+offset_right = 498.2
+offset_bottom = 403.8
+
+[node name="EquBox10" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 109.2
+offset_top = 375.8
+offset_right = 189.2
+offset_bottom = 455.8
+
+[node name="EquBox11" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
+layout_mode = 0
+offset_left = 312.2
+offset_top = 375.8
+offset_right = 392.2
+offset_bottom = 455.8
+
+[node name="TextureRect2" type="TextureRect" parent="Mid"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.87
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -15.15
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_tn6wp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Mid/TextureRect2"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -46.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="Label2" type="Label" parent="Mid/TextureRect2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_688iu")
+theme_override_font_sizes/font_size = 24
+text = "属性：1111"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Mid/TextureRect2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_688iu")
+theme_override_font_sizes/font_size = 24
+text = "属性：1111"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Mid/TextureRect2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_688iu")
+theme_override_font_sizes/font_size = 24
+text = "属性：1111"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Mid/TextureRect2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_688iu")
+theme_override_font_sizes/font_size = 24
+text = "属性：1111"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="ProgressBar" parent="Mid/TextureRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.5
+offset_top = 16.0
+offset_right = 216.5
+offset_bottom = 37.0
+grow_horizontal = 2
+
+[node name="Btm" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.578
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.14398
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Control" type="Control" parent="Btm"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -173.0
+offset_right = 221.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Btm/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.16
+offset_top = -98.0
+offset_right = 111.16
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_tuto7")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Btm/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -62.0
+offset_right = 77.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.415686, 0.415686, 0.415686, 1)
+theme_override_fonts/font = ExtResource("13_h2hbs")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_q4yvo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pbt7n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ajqxj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pyy6b")
+text = "打开"
