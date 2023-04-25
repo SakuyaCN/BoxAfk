@@ -1,5 +1,7 @@
 extends Control
 
+const equ_item_pre = preload("res://scene/item/EquInfo.tscn")
+
 @onready var gold_1 = $Top/TextureRect2/Label #金币1
 @onready var gold_2 = $Top/TextureRect3/Label2 #金币2
 @onready var exp = $Top/TextureRect4/Label3 #修为
@@ -30,3 +32,12 @@ func onPlayerAttrChange():
 
 func _process(delta: float) -> void:
 	pass
+
+#开箱按钮
+func _on_button_pressed() -> void:
+	var type = ConstUtils.equ_type[randi()%ConstUtils.equ_type.size()]
+	var quality = ConstUtils.equ_quality[randi()%ConstUtils.equ_quality.size()]
+	var equ = ConstUtils.createEqu(type,quality)
+	var equ_ins = equ_item_pre.instantiate()
+	add_child(equ_ins)
+	equ_ins.setData(equ)

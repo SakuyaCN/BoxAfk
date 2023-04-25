@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://iglf6sab848i"]
+
+[ext_resource type="Script" path="res://scene/item/EquInfo.gd" id="1_tj5x1"]
+[ext_resource type="PackedScene" uid="uid://b7llm8q8oom2l" path="res://scene/item/equ_panel.tscn" id="2_if3l2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -958.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_tj5x1")
+
+[node name="EquPanel" parent="." instance=ExtResource("2_if3l2")]
+layout_mode = 1

@@ -220,6 +220,7 @@ texture = ExtResource("11_b1y86")
 layout_mode = 0
 offset_left = 203.2
 offset_right = 283.2
+type = "法器"
 
 [node name="EquBox2" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -227,6 +228,7 @@ offset_left = 92.2
 offset_top = 44.8
 offset_right = 172.2
 offset_bottom = 124.8
+type = "头饰"
 
 [node name="EquBox3" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -234,6 +236,7 @@ offset_left = 312.2
 offset_top = 44.8
 offset_right = 392.2
 offset_bottom = 124.8
+type = "项链"
 
 [node name="EquBox4" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -241,6 +244,7 @@ offset_left = 418.2
 offset_top = 120.8
 offset_right = 498.2
 offset_bottom = 200.8
+type = "戒指"
 
 [node name="EquBox6" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -248,6 +252,7 @@ offset_left = 418.2
 offset_top = 221.8
 offset_right = 498.2
 offset_bottom = 301.8
+type = "护腕"
 
 [node name="EquBox5" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -255,6 +260,7 @@ offset_left = -7.79999
 offset_top = 124.8
 offset_right = 72.2
 offset_bottom = 204.8
+type = "肩胛"
 
 [node name="EquBox7" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -262,6 +268,7 @@ offset_left = -7.79999
 offset_top = 221.8
 offset_right = 72.2
 offset_bottom = 301.8
+type = "腰带"
 
 [node name="EquBox8" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -269,6 +276,7 @@ offset_left = -7.79999
 offset_top = 323.8
 offset_right = 72.2
 offset_bottom = 403.8
+type = "下装"
 
 [node name="EquBox9" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -276,6 +284,7 @@ offset_left = 418.2
 offset_top = 323.8
 offset_right = 498.2
 offset_bottom = 403.8
+type = "外袍"
 
 [node name="EquBox10" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -283,6 +292,7 @@ offset_left = 109.2
 offset_top = 375.8
 offset_right = 189.2
 offset_bottom = 455.8
+type = "护符"
 
 [node name="EquBox11" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0
@@ -290,6 +300,7 @@ offset_left = 312.2
 offset_top = 375.8
 offset_right = 392.2
 offset_bottom = 455.8
+type = "鞋子"
 
 [node name="TextureRect2" type="TextureRect" parent="Mid"]
 layout_mode = 1
@@ -355,9 +366,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -216.5
-offset_top = 16.0
+offset_top = 20.0
 offset_right = 216.5
-offset_bottom = 37.0
+offset_bottom = 41.0
 grow_horizontal = 2
 
 [node name="Btm" type="Control" parent="."]
@@ -420,3 +431,5 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_pbt7n")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ajqxj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pyy6b")
 text = "打开"
+
+[connection signal="pressed" from="Btm/Control/Button" to="." method="_on_button_pressed"]
