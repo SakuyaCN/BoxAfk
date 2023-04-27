@@ -4,8 +4,10 @@ const data_path = "user://user_data.json"
 
 signal onPlayerDataChange() #当玩家信息变化时
 signal onPlayerAttrChange() #当玩家属性变化时
+signal onPlayerEquChange() #当玩家装备变化时
 
-var player_data = {}
+var player_data = {}#玩家基本信息
+var player_equ = {} #玩家穿戴装备
 
 #HP血量 ATK攻击 DEF防御 SPEED速度
 var player_attr = {
@@ -27,6 +29,7 @@ func loadData():
 		player_data = JSON.parse_string(content)
 	emit_signal("onPlayerDataChange")
 	emit_signal("onPlayerAttrChange")
+	emit_signal("onPlayerEquChange")
 
 func _saveData():
 	var file = FileAccess.open(data_path, FileAccess.WRITE)
@@ -37,7 +40,8 @@ func firstLoad():
 		gold_1 = 0,
 		gold_2 = 0,
 		exp = 0,
-		player_attr = player_attr
+		player_attr = player_attr,
+		player_equ = player_equ
 	}
 	_saveData()
 
@@ -46,7 +50,14 @@ func setGold(type,gold):
 	player_data[type] += gold
 	emit_signal("onPlayerDataChange")
 
+#改变玩家属性
 func setAttr(type,value):
 	player_attr[type] = value
 	emit_signal("onPlayerAttrChange")
+
+#穿戴装备
+#equ 装备信息
+func equ_up(equ):
+	player_equ[equ.type] = equ
+	emit_signal("onPlayerEquChange")
 	

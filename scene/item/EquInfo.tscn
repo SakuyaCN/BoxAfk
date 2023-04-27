@@ -17,3 +17,5 @@ script = ExtResource("1_tj5x1")
 
 [node name="EquPanel" parent="." instance=ExtResource("2_if3l2")]
 layout_mode = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

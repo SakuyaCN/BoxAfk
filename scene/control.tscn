@@ -185,6 +185,21 @@ offset_top = 0.487999
 offset_bottom = 0.36792
 grow_horizontal = 2
 
+[node name="TextureRect3" type="TextureRect" parent="Mid"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -147.0
+offset_right = 98.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_b1y86")
+
 [node name="TextureRect" type="TextureRect" parent="Mid"]
 layout_mode = 1
 anchors_preset = 8
@@ -200,21 +215,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_ai84c")
 expand_mode = 1
-
-[node name="TextureRect2" type="TextureRect" parent="Mid/TextureRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -98.0
-offset_top = -131.0
-offset_right = 98.0
-offset_bottom = 131.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("11_b1y86")
 
 [node name="EquBox" parent="Mid/TextureRect" instance=ExtResource("12_ckbqf")]
 layout_mode = 0

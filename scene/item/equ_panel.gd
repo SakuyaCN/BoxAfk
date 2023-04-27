@@ -31,3 +31,6 @@ func reload():
 		equ_label.text = "%s     %s" %[ConstUtils.getAttrName(item),equ_data.attr[item]] #绑定属性
 		equ_attr.add_child(equ_label)
 
+func _on_button_pressed() -> void:
+	PlayerData.equ_up(equ_data) #穿戴装备
+	get_parent().queue_free() #关闭页面

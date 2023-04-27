@@ -14,3 +14,8 @@ func _process(delta: float) -> void:
 #绑定数据
 func setData(data):
 	equ_panel.setData(data)
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		queue_free()
