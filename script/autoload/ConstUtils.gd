@@ -19,6 +19,12 @@ var equ_type = ["头饰","项链","戒指","外袍","腰带","下装","鞋子","
 #装备品质
 var equ_quality = ["凡品","中品","上品"]
 
+var quality_num = {
+	"凡品":0.8,
+	"中品":1.0,
+	"上品":1.2
+}
+
 #获取属性名称
 func getAttrName(type):
 	return attr_type[type]
@@ -34,9 +40,9 @@ func createEqu(type,quality):
 		type = type, #类型
 		quality = quality,#品质
 		attr = { #属性
-			atk = 10,
-			def = 10,
-			hp = 50
+			atk = quality_num[quality] * 10,
+			def = quality_num[quality] * 5,
+			hp = quality_num[quality] * 50
 		},
 		image = "res://texutre/equ/icon_bs_10001.png", #图片
 		lv = 1 #等级

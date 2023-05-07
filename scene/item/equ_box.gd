@@ -17,5 +17,5 @@ func setData(equ):
 		texture = load(ConstUtils.getQualityFrame(equ.quality))
 	else:
 		equ_image.texture = null
-		texture = ConstUtils.getQualityFrame("凡品")
+		texture = load(ConstUtils.getQualityFrame("凡品"))
 		
