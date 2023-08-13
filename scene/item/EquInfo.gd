@@ -15,13 +15,15 @@ func _process(delta: float) -> void:
 	pass
 
 #绑定数据
-func setData(data):
+func setData(data,only_show = false):
 	equ_panel.setData(data)
 	
-	if PlayerData.player_equ.has(data.type): #如果存在装备
+	if PlayerData.player_equ.has(data.type) && !only_show: #如果存在装备
 		var up_info = PlayerData.player_equ[data.type] #获取已穿戴的装备
 		equ_panel.contrast(up_info,data)
 		setEqu(data,up_info)
+	elif only_show:
+		equ_panel.setButtonVisible(false)
 
 #传入部位
 func setEqu(data,up_info):

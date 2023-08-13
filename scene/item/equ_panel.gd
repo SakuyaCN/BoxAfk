@@ -5,6 +5,7 @@ extends NinePatchRect
 @onready var equ_image = $TextureRect2/TextureRect4 #装备图片
 @onready var equ_attr = $TextureRect3/ScrollContainer/VBoxContainer #装备属性
 @onready var equ_attr_label = $TextureRect3/ScrollContainer/VBoxContainer/Label
+@onready var btn_equ = $Button
 var equ_data
 
 func _ready() -> void:
@@ -46,3 +47,6 @@ func contrast(data,up_info):
 func _on_button_pressed() -> void:
 	PlayerData.equ_up(equ_data) #穿戴装备
 	get_parent().queue_free() #关闭页面
+
+func setButtonVisible(is_visible):
+	btn_equ.visible = is_visible
